@@ -8,9 +8,9 @@
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -o css/style.comp.css css/style.prefix.css",
+    "prefix": "postcss css/style.comp.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "build:css": "npm-run-all compile:sass prefix compress:css"
   },
   "author": "Tolu",
   "license": "ISC",
